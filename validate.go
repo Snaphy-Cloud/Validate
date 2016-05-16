@@ -1,6 +1,9 @@
 package Validate
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/ttacon/chalk"
+)
 
 //Defining a validate function which return a isValid and message
 type  Validate func(value string) (message string, isValid bool)
@@ -17,11 +20,11 @@ func GetInput(value *string, message string,  validFn Validate){
 	isValid := false
 	var validMsg string
 	for !isValid{
-		fmt.Println(message)
+		fmt.Println(chalk.Blue, message, chalk.Reset)
 		fmt.Scanln(value)
 		validMsg, isValid = validFn(*value)
 		if !isValid{
-			fmt.Println(validMsg)
+			fmt.Println(chalk.Red, validMsg, chalk.Reset)
 		}
 	}
 }
