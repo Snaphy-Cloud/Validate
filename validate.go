@@ -9,7 +9,7 @@ type  Validate func(value string) (message string, isValid bool)
 /*
     Example
     GetInput(&id, "Enter user Id: ", func(value string)(message string, isValid bool){
-	return "User Id must be a number", IsNumeric(id)
+	return "User Id must be a number", IsNumeric(value)
 
     })
  */
