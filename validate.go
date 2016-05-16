@@ -2,10 +2,10 @@ package Validate
 
 import "fmt"
 
-//Defigning a vlidate function which return a isValid and message
+//Defining a validate function which return a isValid and message
 type  Validate func(value string) (message string, isValid bool)
 
-//Accept as value from clid and validate func which must return true to proceed..
+//Accept as value from CLI and validate func which must return true to proceed..
 /*
     Example
     GetInput(&id, "Enter user Id: ", func(value string)(message string, isValid bool){
