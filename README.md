@@ -10,3 +10,9 @@
     GetInput(&email, "Enter email address ", func(email string)(message string, isValid bool){
        return "Email must be a valid one", IsEmail(email)
     })
+
+
+
+
+###[Documentation ](https://godoc.org/github.com/Snaphy-Cloud/Validate)
+
